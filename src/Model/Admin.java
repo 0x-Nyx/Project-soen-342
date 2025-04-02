@@ -1,3 +1,4 @@
+
 public class Admin {
     private static Admin instance = null;
     private String username;
