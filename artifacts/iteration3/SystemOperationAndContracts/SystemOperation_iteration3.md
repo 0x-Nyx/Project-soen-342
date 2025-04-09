@@ -3,89 +3,108 @@
 ## Adding object
 
 - addObject()
-- addObject(isOwned, details, isAuctioned)
-- createObject(isOwned, details, isAuctioned)
+- addObject(name, type, ownedByInstitution, auctioned)
+- createObject(name, type, ownedByInstitution, auctioned)
 
 ## Viewing the object of interest as a Client
 
-- showObjectInterest()
-- showObjectInterest(details)
-- get(i)
-- endShowOnjectInterest()
+- showObjectinterest()
+- showObjectinterest(clientID)
 
 ## Viewing the object of interest as an Expert
 
 - showObjectInterest()
-- get(i)
-- endShowOnjectInterest()
+- showObjectinterest(expertD)
+- fetchObjectinterest(expertD, clientID)
 
 ## Register a new Client
 
 - registerNewClient()
-  signUpClient(username, password, affiliation, contatInfo, text)
-- createAccountPending(username, password, affiliation, contatInfo, text)
-- requestNewAccount(username, password, affiliation, contatInfo, text)
+- signUpClient(name, affiliation, email, password, phoneNumber, text, status)
+- createAccountPending(name, affiliation, email, password, phoneNumber, text, status)
+- requestNewAccount(name, affiliation, email, password, phoneNumber, text, status)
 
 ## Client Request a new service
 
 - requestNewService()
-- requestService(username,typeService)
-- createRequestService(username, typeService)
-- IsAvailableExpert()
+- requestService(clientId, chosenDate, chosenStartTime, chosenEndTime)
+- createRequestService(clientId, chosenDate, chosenStartTime, chosenEndTime)
+- acceptServiceExpert()
 
 ## The expert registers a new availability
 
-- registerAvailability()
-- updateAvailability(time, city, typeService)
+- registerAvailabilityExpert()
+- addAvailability(day, startTime, endTime, expertId)
+- updateAvailability(day, startTime, endTime, expertId)
+
+## The admin adds a new availability for an Expert
+
+- registerAvailabilityAdmin()
+- addAvailability(day, startTime, endTime, expertId)
+- updateAvailability(day, startTime, endTime, expertId)
 
 ## The admin adds a new expert
 
 - registerNewExpert()
-- addExpert(name, contactAdress, licenseNumber, AreaOf Expertise)
-- createExpert(name, contactAdress, licenseNumber, AreaOf Expertise)
-
-# System Operation
+- addExpert(name, contactAdress, city, licenseNumber, password, expertiseId)
+- createExpert(name, contactAdress, city, licenseNumber, password, AreaOfExpertise)
 
 ## Register a new Client
 
 - registerNewClient()
-- signUpClient(email: String, password: String, affiliation: String, text: String, name: String, phone: String)
-- requestNewAccount(email: String, password: String, affiliation: String, text: String, name: String, phone: String)
+- signUpClient(email, password, affiliation, text, name, phone)
+- requestNewAccount(email, password, affiliation, text, name, phone)
 
 ## Login Client
 
 - loginClient()
-- loginClient(email: String, password: String)
-
-## Update Personal Information of the Client
-
-- updateInfo()
-- changeInfo(info: String, clientID: int)
+- loginClient(email, password)
 
 ## Adding Object of Interest
 
-- addObject()
-- addObjectInterest(name: String, type: String, clientID: int)
-- addObjectInterest(name: String, type: String, clientID: int)
-
-## Delete Object of Interest
-
-- deleteObject()
-- deleteObjectInterest(ObjectID: int, clientID: int)
-- deleteObjectInterest(ObjectID: int, clientID: int)
+- addObjectInterest()
+- addObjectInterest(name, type, clientID)
+- addObjectInterest(name, type, clientID)
 
 ## Client search an Auction
 
 - searchAuction()
-- searchAuction(time: Time, location: String, day: Date, type: String)
+- searchAuction(date, time, type, city)
 
 ## Viewing the object of interest as a Client
 
 - showObjectInterest()
-- showObjectInterest(clientID: int)
+- showObjectInterest(clientID)
 
 ## Client Request a new service
 
 - requestNewService()
-- makeRequestService(clientID: int , typeService: String, day: String, startTime: String, endTime: String )
-- isAvailableExpert()
+- requestService(clientId, chosenDate, chosenStartTime, chosenEndTime, requestId)
+- createRequestService(clientId, chosenDate, chosenStartTime, chosenEndTime, requestId)
+- acceptServiceExpert()
+
+## Admin adds a new Auction
+
+- addAuction()
+- creationAucton(stratTime, endTime, date, type, auctionHouseId, expertisesId, isViewing)
+- creationAucton(startTime, endTime, date, type, auctionHouseId, expertisesId, isViewing)
+
+## Admin adds a new Auction House
+
+- addAuctionHouse()
+- addAuctionHouse(name, adress, city)
+- creationAuctionHouse(name, adress, city)
+
+## Expert accepts a new Service from a client
+
+- acceptService()
+- viewServicePending()
+- acceptService(requestId)
+- acceptServiceRequest(requestId, expertId)
+
+## Admin accepts a new Client in the System
+
+- acceptClient()
+- pendingClient()
+- acceptClient(clientId)
+- update(clientId)
