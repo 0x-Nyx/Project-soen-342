@@ -14,6 +14,16 @@
 4. **Encapsulation**  
    - The Domain Layer ensures that important rules are handled in one place.
    - This avoids spreading logic across different parts of the system, making debugging easier.
+  
+## Table Data Gateway (TDG)
+- Applied in the Data Source layer.
+- Each table in the database has a corresponding gateway class that handles CRUD operations.
+- This pattern provides a single point of access to each table which keeps SQL logic isolated.
+
+## Data Mapper
+- Sits between the Domain and Data Source layers.
+- Maps data between in-memory objects (domain models) and database records.
+- Keeps the domain models independent of the database schema.
 
 
 
