@@ -5,7 +5,7 @@
 ## Admin adds a new Auction
 
 - addAuction()
-- creationAucton(startTime, endTime, date, type, auctionHouseId, expertisesId, isViewing)
+- creationAucton(startTime, endTime, date, type, auctionHouseId, expertisesId, )
 - creationAucton(startTime, endTime, date, type, auctionHouseId, expertisesId, isViewing)
 
 ## Admin adds a new Auction House
@@ -56,8 +56,8 @@
 ## Client Request a new service
 
 - requestNewService()
-- requestService(clientId, chosenDate, chosenStartTime, chosenEndTime)
-- createRequestService(clientId, chosenDate, chosenStartTime, chosenEndTime)
+- requestService(clientId, serviceTypeId, chosenDate, chosenStartTime, chosenEndTime)
+- createRequestService(clientId, serviceTypeId, chosenDate, chosenStartTime, chosenEndTime)
 - acceptServiceExpert()
 
 ## Adding Object of Interest
