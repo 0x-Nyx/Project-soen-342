@@ -31,7 +31,6 @@ public class AdminConsole {
         scanner.close();
     }
 
-
     private static void printMenu() {
         System.out.println("\n========== ADMIN MENU ==========");
         System.out.println("[1] Create a new Object");
@@ -55,7 +54,6 @@ public class AdminConsole {
         boolean auctioned = scanner.nextLine().equalsIgnoreCase("yes");
 
         Object newObject = new Object(name, type, owned, auctioned);
-
 
         catalog.addObject(newObject);
 
