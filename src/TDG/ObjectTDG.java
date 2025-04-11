@@ -5,8 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Model.ArtObject;
-//import Model.ArtObject;
-//import Model.ObjectOfInterest;
+
 import DB.Connect;
 
 public class ObjectTDG {
@@ -101,9 +100,6 @@ public class ObjectTDG {
 
             try (ResultSet rs = stmt.executeQuery()) {
                 while (rs.next()) {
-                    // System.out.println("ID: " + rs.getInt("Object_ID"));
-                    // System.out.println("Name: " + rs.getString("Name_object"));
-                    // System.out.println("Type: " + rs.getString("type"));
 
                     ArtObject object = new ArtObject(
                             rs.getInt("Object_ID"),

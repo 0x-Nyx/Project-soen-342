@@ -88,31 +88,18 @@ public class AuctionTDG {
         try (Connection conn = Connect.connect();
                 PreparedStatement stmt = conn.prepareStatement(query)) {
 
-            /*
-             * System.out.println("Executing query with the following parameters:");
-             * System.out.println("Date: " + date);
-             * System.out.println("Time: " + time);
-             * System.out.println("Auction Type: " + type);
-             * System.out.println("City: " + city);
-             */
-
             stmt.setDate(1, date);
             stmt.setTime(2, time);
             stmt.setTime(3, time);
             stmt.setString(4, type);
             stmt.setString(5, city);
 
-            // System.out.println("Prepared statement set. Executing query...");
-
             ResultSet rs = stmt.executeQuery();
-
-            // System.out.println("Query executed. Processing results...");
 
             while (rs.next()) {
                 Auction auction = AuctionMapper.mapRowToAuction(rs);
                 auctions.add(auction);
 
-                // System.out.println("Auction found: " + auction);
             }
 
         } catch (SQLException e) {
