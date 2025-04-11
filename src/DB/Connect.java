@@ -13,7 +13,6 @@ public class Connect {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            // Database connection details
             String url = "jdbc:mysql://localhost:3306/soen342"; // Replace with your actual DB name
             String user = "root";
             String password = "Password1234";
@@ -36,14 +35,14 @@ public class Connect {
             return;
         }
 
-        String query = "SHOW TABLES"; // SQL query to get all table names
+        String query = "SHOW TABLES";
 
         try (Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery(query)) {
 
             System.out.println("Tables in the database:");
             while (rs.next()) {
-                System.out.println("- " + rs.getString(1)); // Fetch table names
+                System.out.println("- " + rs.getString(1));
             }
 
         } catch (SQLException e) {
