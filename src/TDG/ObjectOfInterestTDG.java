@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +18,8 @@ public class ObjectOfInterestTDG {
         String sql = "INSERT INTO ObjectOfInterest (object_name, object_type, client_id) VALUES (?, ?, ?)";
 
         try (Connection conn = Connect.connect();
-                PreparedStatement stmt = conn.prepareStatement(sql)) {
+                PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+
             stmt.setString(1, obj.getName());
             stmt.setString(2, obj.getType());
             stmt.setInt(3, obj.getClientId());
