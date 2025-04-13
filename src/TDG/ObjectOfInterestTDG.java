@@ -55,7 +55,7 @@ public class ObjectOfInterestTDG {
 
         try (Connection conn = Connect.connect();
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setInt(1, clientId); // Set clientId in the query
+            stmt.setInt(1, clientId); 
             try (ResultSet rs = stmt.executeQuery()) {
                 while (rs.next()) {
                     interests.add(new ObjectOfInterest(

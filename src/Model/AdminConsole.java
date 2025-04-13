@@ -14,14 +14,11 @@ import java.util.ArrayList;
 import DB.Connect;
 import Mapper.AuctionMapper;
 import Mapper.ExpertMapper;
-//import TDG.AuctionTDG;
 import TDG.ObjectTDG;
 import TDG.AuctionHouseTDG;
-//import Model.Expert;
 import TDG.ExpertTDG;
 import TDG.AvailabilityTDG;
 import TDG.ClientTDG;
-//import Model.Client;
 
 public class AdminConsole {
     public static void main(String[] args) {
@@ -89,7 +86,6 @@ public class AdminConsole {
             }
         }
 
-        // scanner.close();
     }
 
     private static void createNewObject(Scanner scanner) {

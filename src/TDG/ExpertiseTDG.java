@@ -1,6 +1,5 @@
 package TDG;
 
-//DONT USE IT 
 import java.sql.*;
 
 import DB.Connect;

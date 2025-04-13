@@ -178,7 +178,7 @@ public class ClientConsole {
                 System.out.println("Object of interest saved.\n");
 
             } catch (Exception e) {
-                // System.out.println(" Error saving object of interest: " + e.getMessage());
+                System.out.println(" Error saving object of interest: " + e.getMessage());
                 e.printStackTrace();
             }
 
