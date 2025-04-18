@@ -42,7 +42,7 @@ This system manages:
 
 Developped by
 
-- Maria-Christine Catiche | 40247670
-- Jessica Codreanu | 40262017
+- Maria-Christine Catiche
+- Jessica Codreanu 
 
 ---
