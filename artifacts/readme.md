@@ -1,2 +1,3 @@
 ## Artifacts
- This directory will contain all project diagrams.
+
+This directory contains all project artifacts, organized by iteration according to client requirements.

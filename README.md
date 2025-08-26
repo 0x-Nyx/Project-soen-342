@@ -24,7 +24,6 @@ This system manages:
 - System Operations & Contracts
 - UML Interaction Diagram
 - UML Class Diagram
-- Proof of Concept (PoC)
 - Relational Data Model
 - Architectural Pattern
 - OCL
@@ -42,7 +41,8 @@ This system manages:
 
 Developped by
 
+-Jessica Codreanu
+
 - Maria-Christine Catiche
-- Jessica Codreanu 
 
 ---
