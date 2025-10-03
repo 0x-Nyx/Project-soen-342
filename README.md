@@ -41,7 +41,7 @@ This system manages:
 
 Developped by
 
--Jessica Codreanu
+- Jessica Codreanu
 
 - Maria-Christine Catiche
 
